@@ -14,7 +14,7 @@
 
 [+] I understand there are multiple ways to execute this in a more efficient manner.
 
-[+] Please feel free to contact me with suggestions with code changes.
+[+] Please feel free to contact me with suggestions, improvements etc.
 
 
 [+] Enjoy.
