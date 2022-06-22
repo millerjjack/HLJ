@@ -4,34 +4,8 @@
 import re
 import regex
 from Source import ht_api
+from art import *
 
-hlj_logo = ''''''''''
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@&/    .%@@@@@@@@@@@@@@@@@@@@@@@@@@@@%,    *&@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@*             &@@@@@@@@@@@@@@@@@@@@@             .@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@&                 @@@@@@@%((#@@@@@@@                 /@@@@@@@@@@@@@
-@@@@@@@@@@@@@                 (@@(            /@@#                 &@@@@@@@@@@@@
-@@@@@@@@@@@@&                @@#                (@@                #@@@@@@@@@@@@
-@@@@@@@@@@@@@               &@%                  #@&               @@@@@@@@@@@@@
-@@@@@@@@@@@@@@,             @@*                  .@@             *@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@.         #@@@                  @@@%         .&@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@%#(((((((((((#&@@@@,          ,@@@@&##((((/(((((#%@@@@@@@@@@@@@@@
-@@@@@@@@@@@                      (@@@@@@@@@@@@#                      &@@@@@@@@@@
-@@@@@@@@@                   ,@@@@@@@@@@@@@@@@@@@@@@*                   @@@@@@@@@
-@@@@@@@@                  @@@,                    .@@@                  @@@@@@@@
-@@@@@@@&                #@@                          @@%                &@@@@@@@
-@@@@@@@&               ,@@                            @@/               &@@@@@@@
-@@@@@@@&               &@%                            #@&               &@@@@@@@
-@@@@@@@&               &@%                            #@@               &@@@@@@@
-@@@@@@@@/              &@%                            #@@              *@@@@@@@@
-@@@@@@@@@@@@@@@@&#/*,..@@%                            #@@..,*/#&@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@                            &@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%/.          ./%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-'''''''''
 
 menu = """
 [1] Traceroute --> Using mtr an advanced traceroute tool trace the path of an Internet connection.
@@ -72,107 +46,108 @@ def run(hosts):
             print('\n')
             print("[+] Sneaky Traceroute time >:D")
             for host in hosts:
-                ht_api.ht_api(1, host)
+                ht_api.lookup(1, host)
 
         elif choice == '2':
             print('\n')
             print("[+] A Ping Test... Really? :/")
             for host in hosts:
-                ht_api.ht_api(2, host)
+                ht_api.lookup(2, host)
 
         elif choice == '3':
             print('\n')
             print("[+] DNS Lookup...HMMMMM ")
             for host in hosts:
-                ht_api.ht_api(3, host)
+                ht_api.lookup(3, host)
 
         elif choice == '4':
             print('\n')
-            print("[+] Finding (A)ss Records ;)")
+            print("[+] Finding Records...")
             for host in hosts:
-                ht_api.ht_api(4, host)
+                ht_api.lookup(4, host)
 
         elif choice == '5':
             print('\n')
-            print("[+] Reversing DAT DNS bby :P")
+            print("[+] Reversing dns....")
             for host in hosts:
-                ht_api.ht_api(5, host)
+                ht_api.lookup(5, host)
 
         elif choice == '6':
             print('\n')
             print("[+] Sharing is caring <3")
             for host in hosts:
-                ht_api.ht_api(6, host)
+                ht_api.lookup(6, host)
 
         elif choice == '7':
             print('\n')
             print("[+] Attempting Zone Transfer")
             for host in hosts:
-                ht_api.ht_api(7, host)
+                ht_api.lookup(7, host)
 
         elif choice == '8':
             print('\n')
             print("[+] Who IS you???")
             for host in hosts:
-                ht_api.ht_api(8, host)
+                ht_api.lookup(8, host)
 
         elif choice == '9':
             print('\n')
-            print("[+] GEOOOODUDE")
+            print("[+] Geo Lookup...")
             for host in hosts:
-                ht_api.ht_api(9, host)
+                ht_api.lookup(9, host)
 
         elif choice == '10':
             print('\n')
-            print("[+] Reversing Dat IP")
+            print("[+] Reversing IP")
             for host in hosts:
-                ht_api.ht_api(10, host)
+                ht_api.lookup(10, host)
 
         elif choice == '11':
             print('\n')
             print("[+] TCP PORT SCAN RLY U COULD DO THIS MANUALLY!!!!")
             for host in hosts:
-                ht_api.ht_api(11, host)
+                ht_api.lookup(11, host)
 
         elif choice == '12':
             print('\n')
             print("[+] Subnet Lookup....")
             for host in hosts:
-                ht_api.ht_api(12, host)
+                ht_api.lookup(12, host)
 
         elif choice == '13':
             print('\n')
             print("[+] Gathering HTTP Headers.....")
             for host in hosts:
-                ht_api.ht_api(13, host)
+                ht_api.lookup(13, host)
 
         elif choice == '14':
             print('\n')
-            print("[+] Im boutta dump hella page links on you x")
+            print("[+] Page links coming up....")
             for host in hosts:
-                ht_api.ht_api(14, host)
+                ht_api.lookup(14, host)
 
         elif choice == '15':
             print('\n')
             print("[+] AS Lookup I guess...")
             for host in hosts:
-                ht_api.ht_api(15, host)
+                ht_api.lookup(15, host)
 
         elif choice == '16':
             print('\n')
-            print("[+] ohh these banners look juicy ;)")
+            print("[+] ohh juicy banners")
             for host in hosts:
-                ht_api.ht_api(16, host)
+                ht_api.lookup(16, host)
 
     except KeyboardInterrupt:
         print('\nTerminated')
         quit()
-    except:
-        print('Invalid Option!\n')
-        return run
+    except ValueError:
+        pass
 
 
-print(hlj_logo)
+Art = text2art(" HLJ", "rnd-large")
+print(Art)
+
 print(menu)
 
 addresses()

@@ -1,2 +1,4 @@
 requests==2.27.1
 regex==2022.6.2
+DateTime==4.4
+art==5.6

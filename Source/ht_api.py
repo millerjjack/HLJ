@@ -1,12 +1,15 @@
 #!/user/bin/env python
 # -*- coding: utf-8 -*-
 
+import json
 import requests
+from datetime import datetime
 
-API_KEY = "c6b9d78d9a2e3cccb0668d2899a2651c91c7acc4fc8cd2a3b71542d9a1bfa6897c58ed553bae4e96"
+li = "\n______________________________________________________\n"
+API_KEY = ""
 
 
-def ht_api(choice, host):
+def lookup(choice, host):
     request_urls = [
         "https://api.hackertarget.com/mtr/",
         "https://api.hackertarget.com/nping/",
@@ -27,7 +30,19 @@ def ht_api(choice, host):
     ]
     params = {'q': host,
               'apikey': API_KEY}
-    request_url = request_urls[choice-1]
-    response = requests.get(request_url, params=params)
-    print(response.text, file=open("juicy.txt", "a"))
-    print("i spat the results into a txt file called juicy...")
+    if choice == 16:
+        request_url = request_urls[choice - 1]
+        response = requests.get(request_url, params=params)
+        load = json.loads(response.text)
+        data = json.dumps(load, indent=4)
+        now = datetime.now()
+        now = now.strftime("\ndate: %Y/%m/%d, Time: H%H M%M")
+        final = request_url[29:] + now + " target: " + host + li + data + li
+        print(final, file=open("juicy.txt", "a"))
+    else:
+        request_url = request_urls[choice - 1]
+        response = requests.get(request_url, params=params)
+        now = datetime.now()
+        now = now.strftime("\ndate: %Y/%m/%d, Time: H%H M%M")
+        final = request_url[29:] + now + " target: " + host + li + response.text + li
+        print(final, file=open("juicy.txt", "a"))
