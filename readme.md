@@ -10,8 +10,8 @@
 
 4. To launch run "python3 main.py", and follow the prompts.
 
-[+] I by no means am close to being a developer,
-[+] I understand there are multiple ways to execute this in a more efficient manner,
+[+] I by no means am close to being a developer, 
+[+] I understand there are multiple ways to execute this in a more efficient manner, 
 [+] Please feel free to contact me with suggestions with code changes,
 
 [+] Enjoy.
