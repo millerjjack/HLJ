@@ -41,7 +41,6 @@ def addresses():
 def run(hosts):
     try:
         choice = input("Pick ya poison: ")
-
         if choice == '1':
             print('\n')
             print("[+] Sneaky Traceroute time >:D")
@@ -56,7 +55,7 @@ def run(hosts):
 
         elif choice == '3':
             print('\n')
-            print("[+] DNS Lookup...HMMMMM ")
+            print("[+] DNS Lookup...HMM-MMM ")
             for host in hosts:
                 ht_api.lookup(3, host)
 
@@ -149,5 +148,4 @@ Art = text2art(" HLJ", "rnd-large")
 print(Art)
 
 print(menu)
-
 addresses()
